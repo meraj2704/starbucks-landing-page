@@ -8,6 +8,7 @@
 </head>
 <body>
     <section>
+        <div class="circle"></div>
         <header>
             <a href="#"><img  class="logo" src="/src/logo.png" alt=""></a>
             <ul>
@@ -24,17 +25,28 @@
                 <a href="#">Learn More</a>
             </div>
             <div class="imgBox">
-                <img class="Starbucks" src="/src/img1.png" alt="">
+                <img class="starbucks" src="/src/img1.png" alt="">
             </div>
         </div>
         <ul class="thumb">
-            <li><img src="/src/thumb1.png" alt=""></li>
-            <li><img src="/src/thumb2.png" alt=""></li>
-            <li><img src="/src/thumb3.png" alt=""></li>
+            <li><img src="/src/thumb1.png" onclick="imgSlider('/src/img1.png'); changeCircleColor('#017143')" alt=""></li>
+            <li><img src="/src/thumb2.png" onclick="imgSlider('/src/img2.png'); changeCircleColor('#eb7495')" alt=""></li>
+            <li><img src="/src/thumb3.png" onclick="imgSlider('/src/img3.png'); changeCircleColor('#d752b1')" alt=""></li>
         </ul>
         <ul class="sci">
-            <li><a href="#"><img src="" alt=""></a></li>
+            <li><a href="#"><img src="/src/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="/src/instagram.png" alt=""></a></li>
+            <li><a href="#"><img src="/src/twitter.png" alt=""></a></li>
         </ul>
     </section>
+    <script type="text/javascript">
+        function imgSlider(any){
+            document.querySelector('.starbucks').src = any;
+        }
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
 </body>
 </html>
